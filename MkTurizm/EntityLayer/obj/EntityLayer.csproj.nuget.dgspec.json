@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MK\\Desktop\\Yeni klasör\\Wissen-Proje\\MkTurizm\\EntityLayer\\EntityLayer.csproj": {}
+    "C:\\Users\\MK\\Desktop\\Yeni klasör\\MkTurizm\\MkTurizm\\EntityLayer\\EntityLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MK\\Desktop\\Yeni klasör\\Wissen-Proje\\MkTurizm\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\MK\\Desktop\\Yeni klasör\\MkTurizm\\MkTurizm\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MK\\Desktop\\Yeni klasör\\Wissen-Proje\\MkTurizm\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\MK\\Desktop\\Yeni klasör\\MkTurizm\\MkTurizm\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\MK\\Desktop\\Yeni klasör\\Wissen-Proje\\MkTurizm\\EntityLayer\\EntityLayer.csproj",
+        "projectPath": "C:\\Users\\MK\\Desktop\\Yeni klasör\\MkTurizm\\MkTurizm\\EntityLayer\\EntityLayer.csproj",
         "packagesPath": "C:\\Users\\MK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MK\\Desktop\\Yeni klasör\\Wissen-Proje\\MkTurizm\\EntityLayer\\obj\\",
+        "outputPath": "C:\\Users\\MK\\Desktop\\Yeni klasör\\MkTurizm\\MkTurizm\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

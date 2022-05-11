@@ -8,16 +8,20 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Concrete
 {
-    public class Context : DbContext
+    class MKContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=MK\\SQLEXPRESS;Database=MkTurizm;integrated security=true;");
         }
-        public DbSet<Seat> Seats { get; set; }
         public DbSet<Passenger> Passengers { get; set; }
         public DbSet<BusService> BusServices { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Reservation>().HasKey(pc => new {pc.ReservationId,pc.SeatNo,pc.BusServiceId});
+        }
 
     }
 }

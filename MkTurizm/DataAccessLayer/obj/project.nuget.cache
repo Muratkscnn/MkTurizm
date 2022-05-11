@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4S2Ibv3KayN8WFYzzm7QQlAtvrZXfTAOlQ13c0uQJNFLqTfO8pd7jFLlaJR9QIOAJUzCpE1YwrvJagUzksc2LA==",
+  "dgSpecHash": "Axl7S9VXGUJxwrUnV+qCakz+OFm0fCDm4Ny1ssCc8hvI5Nv16fLfz6OqjwUTmHYMAQkCKVCigLOJN0k9NUcQOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MK\\Desktop\\Yeni klasör\\Wissen-Proje\\MkTurizm\\DataAccessLayer\\DataAccessLayer.csproj",
+  "projectFilePath": "C:\\Users\\MK\\Desktop\\Yeni klasör\\MkTurizm\\MkTurizm\\DataAccessLayer\\DataAccessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MK\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\MK\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

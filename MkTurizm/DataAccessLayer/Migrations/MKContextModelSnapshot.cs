@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataAccessLayer.Migrations
 {
-    [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(MKContext))]
+    partial class MKContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -31,6 +31,9 @@ namespace DataAccessLayer.Migrations
 
                     b.Property<string>("FromCity")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
 
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
@@ -67,90 +70,51 @@ namespace DataAccessLayer.Migrations
             modelBuilder.Entity("EntityLayer.Reservation", b =>
                 {
                     b.Property<int>("ReservationId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("PassengerId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SeatId")
-                        .HasColumnType("int");
-
-                    b.HasKey("ReservationId");
-
-                    b.HasIndex("PassengerId");
-
-                    b.HasIndex("SeatId");
-
-                    b.ToTable("Reservations");
-                });
-
-            modelBuilder.Entity("EntityLayer.Seat", b =>
-                {
-                    b.Property<int>("SeatId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("BuServiceId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("BusServiceId")
                         .HasColumnType("int");
 
                     b.Property<int>("SeatNo")
                         .HasColumnType("int");
 
-                    b.Property<bool>("SeatStatus")
-                        .HasColumnType("bit");
+                    b.Property<int>("BusServiceId")
+                        .HasColumnType("int");
 
-                    b.HasKey("SeatId");
+                    b.Property<int>("PassengerId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ReservationId", "SeatNo", "BusServiceId");
 
                     b.HasIndex("BusServiceId");
 
-                    b.ToTable("Seats");
+                    b.HasIndex("PassengerId");
+
+                    b.ToTable("Reservations");
                 });
 
             modelBuilder.Entity("EntityLayer.Reservation", b =>
                 {
+                    b.HasOne("EntityLayer.BusService", "BusService")
+                        .WithMany("Reservation")
+                        .HasForeignKey("BusServiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("EntityLayer.Passenger", "Passenger")
                         .WithMany("Reservations")
                         .HasForeignKey("PassengerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EntityLayer.Seat", "Seat")
-                        .WithMany("Reservations")
-                        .HasForeignKey("SeatId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("BusService");
 
                     b.Navigation("Passenger");
-
-                    b.Navigation("Seat");
-                });
-
-            modelBuilder.Entity("EntityLayer.Seat", b =>
-                {
-                    b.HasOne("EntityLayer.BusService", "BusService")
-                        .WithMany("Seats")
-                        .HasForeignKey("BusServiceId");
-
-                    b.Navigation("BusService");
                 });
 
             modelBuilder.Entity("EntityLayer.BusService", b =>
                 {
-                    b.Navigation("Seats");
+                    b.Navigation("Reservation");
                 });
 
             modelBuilder.Entity("EntityLayer.Passenger", b =>
-                {
-                    b.Navigation("Reservations");
-                });
-
-            modelBuilder.Entity("EntityLayer.Seat", b =>
                 {
                     b.Navigation("Reservations");
                 });

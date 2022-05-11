@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,8 +12,10 @@ namespace EntityLayer
         public int ReservationId { get; set; }
         public int PassengerId { get; set; }
         public Passenger Passenger { get; set; }
-        public int SeatId { get; set; }
-        public Seat Seat { get; set; }
+        public int BusServiceId { get; set; }
+        public int SeatNo { get; set; }
+        public BusService BusService { get; set; }
+
 
     }
 }
