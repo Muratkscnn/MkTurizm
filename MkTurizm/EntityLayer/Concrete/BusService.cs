@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityLayer.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,8 +10,8 @@ namespace EntityLayer
     public class BusService
     {
         public int BusServiceId { get; set; }
-        public string ToCity { get; set; }
-        public string FromCity { get; set; }
+        public int StationId { get; set; }
+        public Station Station { get; set; }
         public int Price { get; set; }
         public DateTime Date { get; set; }
         public bool Status { get; set; }

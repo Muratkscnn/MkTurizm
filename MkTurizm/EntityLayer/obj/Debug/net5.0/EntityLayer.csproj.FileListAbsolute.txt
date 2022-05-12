@@ -22,3 +22,15 @@ C:\Users\MK\Desktop\Yeni klasör\MkTurizm\MkTurizm\EntityLayer\obj\Debug\net5.0\
 C:\Users\MK\Desktop\Yeni klasör\MkTurizm\MkTurizm\EntityLayer\obj\Debug\net5.0\EntityLayer.dll
 C:\Users\MK\Desktop\Yeni klasör\MkTurizm\MkTurizm\EntityLayer\obj\Debug\net5.0\ref\EntityLayer.dll
 C:\Users\MK\Desktop\Yeni klasör\MkTurizm\MkTurizm\EntityLayer\obj\Debug\net5.0\EntityLayer.pdb
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\EntityLayer\bin\Debug\net5.0\EntityLayer.deps.json
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\EntityLayer\bin\Debug\net5.0\EntityLayer.dll
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\EntityLayer\bin\Debug\net5.0\ref\EntityLayer.dll
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\EntityLayer\bin\Debug\net5.0\EntityLayer.pdb
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\EntityLayer\obj\Debug\net5.0\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\EntityLayer\obj\Debug\net5.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\EntityLayer\obj\Debug\net5.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\EntityLayer\obj\Debug\net5.0\EntityLayer.AssemblyInfo.cs
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\EntityLayer\obj\Debug\net5.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\EntityLayer\obj\Debug\net5.0\EntityLayer.dll
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\EntityLayer\obj\Debug\net5.0\ref\EntityLayer.dll
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\EntityLayer\obj\Debug\net5.0\EntityLayer.pdb

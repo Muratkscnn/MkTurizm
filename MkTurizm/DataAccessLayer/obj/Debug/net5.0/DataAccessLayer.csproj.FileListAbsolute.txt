@@ -34,3 +34,21 @@ C:\Users\MK\Desktop\Yeni klasör\MkTurizm\MkTurizm\DataAccessLayer\obj\Debug\net
 C:\Users\MK\Desktop\Yeni klasör\MkTurizm\MkTurizm\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
 C:\Users\MK\Desktop\Yeni klasör\MkTurizm\MkTurizm\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
 C:\Users\MK\Desktop\Yeni klasör\MkTurizm\MkTurizm\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.deps.json
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.runtimeconfig.json
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.runtimeconfig.dev.json
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.dll
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\bin\Debug\net5.0\ref\DataAccessLayer.dll
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\bin\Debug\net5.0\DataAccessLayer.pdb
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\bin\Debug\net5.0\EntityLayer.dll
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\bin\Debug\net5.0\EntityLayer.pdb
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.dll
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\obj\Debug\net5.0\ref\DataAccessLayer.dll
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.pdb
+C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\DataAccessLayer\obj\Debug\net5.0\DataAccessLayer.genruntimeconfig.cache

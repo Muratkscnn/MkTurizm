@@ -19,8 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ViewComponents\BusService\" />
-    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="ViewComponents\NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>

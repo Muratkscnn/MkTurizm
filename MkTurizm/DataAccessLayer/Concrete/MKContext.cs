@@ -1,4 +1,5 @@
 ﻿using EntityLayer;
+using EntityLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,15 +13,18 @@ namespace DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=MK\\SQLEXPRESS;Database=MkTurizm;integrated security=true;");
+            //optionsBuilder.UseSqlServer("Server=MK\\SQLEXPRESS;Database=MkTurizm;integrated security=true;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-8M7D7GE\\SQLEXPRESS;Database=MkTurizm;integrated security=true;");
+
         }
         public DbSet<Passenger> Passengers { get; set; }
         public DbSet<BusService> BusServices { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Station> Stations { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Reservation>().HasKey(pc => new {pc.ReservationId,pc.SeatNo,pc.BusServiceId});
+            modelBuilder.Entity<Reservation>().HasKey(pc => new { pc.BusServiceId, pc.SeatNo });
         }
 
     }

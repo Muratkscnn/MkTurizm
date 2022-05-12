@@ -9,5 +9,6 @@ namespace DataAccessLayer.Abstract
 {
     public interface IBusServiceDal :IGenericDal<BusService>
     {
+        List<BusService> BusServiceList(string tocity, string fromcity);
     }
 }

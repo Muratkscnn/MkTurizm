@@ -3,27 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DataAccessLayer.Migrations
 {
-    public partial class mig2 : Migration
+    public partial class mig1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "BusServices",
-                columns: table => new
-                {
-                    BusServiceId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ToCity = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    FromCity = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Price = table.Column<int>(type: "int", nullable: false),
-                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Status = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_BusServices", x => x.BusServiceId);
-                });
-
             migrationBuilder.CreateTable(
                 name: "Passengers",
                 columns: table => new
@@ -40,17 +23,54 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Stations",
+                columns: table => new
+                {
+                    StationId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ToCity = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Station1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Station2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FromCity = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Stations", x => x.StationId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BusServices",
+                columns: table => new
+                {
+                    BusServiceId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    StationId = table.Column<int>(type: "int", nullable: false),
+                    Price = table.Column<int>(type: "int", nullable: false),
+                    Date = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Status = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BusServices", x => x.BusServiceId);
+                    table.ForeignKey(
+                        name: "FK_BusServices_Stations_StationId",
+                        column: x => x.StationId,
+                        principalTable: "Stations",
+                        principalColumn: "StationId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Reservations",
                 columns: table => new
                 {
-                    ReservationId = table.Column<int>(type: "int", nullable: false),
                     BusServiceId = table.Column<int>(type: "int", nullable: false),
                     SeatNo = table.Column<int>(type: "int", nullable: false),
                     PassengerId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Reservations", x => new { x.ReservationId, x.SeatNo, x.BusServiceId });
+                    table.PrimaryKey("PK_Reservations", x => new { x.BusServiceId, x.SeatNo });
                     table.ForeignKey(
                         name: "FK_Reservations_BusServices_BusServiceId",
                         column: x => x.BusServiceId,
@@ -66,9 +86,9 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Reservations_BusServiceId",
-                table: "Reservations",
-                column: "BusServiceId");
+                name: "IX_BusServices_StationId",
+                table: "BusServices",
+                column: "StationId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Reservations_PassengerId",
@@ -86,6 +106,9 @@ namespace DataAccessLayer.Migrations
 
             migrationBuilder.DropTable(
                 name: "Passengers");
+
+            migrationBuilder.DropTable(
+                name: "Stations");
         }
     }
 }

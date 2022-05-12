@@ -9,7 +9,6 @@ namespace EntityLayer
 {
     public class Reservation
     {
-        public int ReservationId { get; set; }
         public int PassengerId { get; set; }
         public Passenger Passenger { get; set; }
         public int BusServiceId { get; set; }

@@ -29,21 +29,44 @@ namespace DataAccessLayer.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("FromCity")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("Price")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StationId")
                         .HasColumnType("int");
 
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
+                    b.HasKey("BusServiceId");
+
+                    b.HasIndex("StationId");
+
+                    b.ToTable("BusServices");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.Station", b =>
+                {
+                    b.Property<int>("StationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("FromCity")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Station1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Station2")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ToCity")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("BusServiceId");
+                    b.HasKey("StationId");
 
-                    b.ToTable("BusServices");
+                    b.ToTable("Stations");
                 });
 
             modelBuilder.Entity("EntityLayer.Passenger", b =>
@@ -69,25 +92,31 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Reservation", b =>
                 {
-                    b.Property<int>("ReservationId")
+                    b.Property<int>("BusServiceId")
                         .HasColumnType("int");
 
                     b.Property<int>("SeatNo")
                         .HasColumnType("int");
 
-                    b.Property<int>("BusServiceId")
-                        .HasColumnType("int");
-
                     b.Property<int>("PassengerId")
                         .HasColumnType("int");
 
-                    b.HasKey("ReservationId", "SeatNo", "BusServiceId");
-
-                    b.HasIndex("BusServiceId");
+                    b.HasKey("BusServiceId", "SeatNo");
 
                     b.HasIndex("PassengerId");
 
                     b.ToTable("Reservations");
+                });
+
+            modelBuilder.Entity("EntityLayer.BusService", b =>
+                {
+                    b.HasOne("EntityLayer.Concrete.Station", "Station")
+                        .WithMany("BusServices")
+                        .HasForeignKey("StationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Station");
                 });
 
             modelBuilder.Entity("EntityLayer.Reservation", b =>
@@ -112,6 +141,11 @@ namespace DataAccessLayer.Migrations
             modelBuilder.Entity("EntityLayer.BusService", b =>
                 {
                     b.Navigation("Reservation");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concrete.Station", b =>
+                {
+                    b.Navigation("BusServices");
                 });
 
             modelBuilder.Entity("EntityLayer.Passenger", b =>
