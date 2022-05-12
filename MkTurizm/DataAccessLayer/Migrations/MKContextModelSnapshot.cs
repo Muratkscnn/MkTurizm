@@ -29,9 +29,6 @@ namespace DataAccessLayer.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
-
                     b.Property<int>("StationId")
                         .HasColumnType("int");
 
@@ -45,6 +42,21 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("BusServices");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.City", b =>
+                {
+                    b.Property<int>("CityId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CityName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CityId");
+
+                    b.ToTable("Cities");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.Station", b =>
                 {
                     b.Property<int>("StationId")
@@ -54,6 +66,9 @@ namespace DataAccessLayer.Migrations
 
                     b.Property<string>("FromCity")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
 
                     b.Property<string>("Station1")
                         .HasColumnType("nvarchar(max)");

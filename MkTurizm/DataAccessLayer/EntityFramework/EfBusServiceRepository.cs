@@ -17,7 +17,7 @@ namespace DataAccessLayer.EntityFramework
         {
             using (var c=new MKContext())
             {
-              return  c.BusServices.Include(x=>x.Station).Include(x => x.Reservation).ThenInclude(c => c.PassengerId).Where(x => x.Station.FromCity == fromcity && x.Station.ToCity == tocity).ToList();
+              return  c.BusServices.Include(x=>x.Station).Where(x => x.Station.FromCity== fromcity && x.Station.ToCity == tocity).ToList();
             }
         }
     }

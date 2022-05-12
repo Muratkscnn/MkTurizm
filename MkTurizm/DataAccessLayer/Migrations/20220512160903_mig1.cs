@@ -31,7 +31,8 @@ namespace DataAccessLayer.Migrations
                     ToCity = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Station1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Station2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    FromCity = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    FromCity = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Price = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -45,7 +46,6 @@ namespace DataAccessLayer.Migrations
                     BusServiceId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     StationId = table.Column<int>(type: "int", nullable: false),
-                    Price = table.Column<int>(type: "int", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Status = table.Column<bool>(type: "bit", nullable: false)
                 },
