@@ -39,6 +39,12 @@ namespace UI.Controllers
 
             return View(values);
         }
+        [HttpPost]
+        public IActionResult TicketAdd(int id)
+        {
+            var values = bm.GetById(id);
+            return View(values);
+        }
     }
 
 }

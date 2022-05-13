@@ -13,8 +13,8 @@ namespace DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=MK\\SQLEXPRESS;Database=MkTurizmDb;integrated security=true;");
-            //optionsBuilder.UseSqlServer("Server=DESKTOP-8M7D7GE\\SQLEXPRESS;Database=MkTurizm;integrated security=true;");
+            //optionsBuilder.UseSqlServer("Server=MK\\SQLEXPRESS;Database=MkTurizmDb;integrated security=true;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-8M7D7GE\\SQLEXPRESS;Database=MkTurizm;integrated security=true;");
 
         }
         public DbSet<Passenger> Passengers { get; set; }

@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MK\\Desktop\\Yeni klasör\\MkTurizm\\MkTurizm\\EntityLayer\\EntityLayer.csproj": {}
+    "C:\\Users\\Web ve Mobil Prog\\Desktop\\MkTurizm\\MkTurizm\\EntityLayer\\EntityLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MK\\Desktop\\Yeni klasör\\MkTurizm\\MkTurizm\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\Web ve Mobil Prog\\Desktop\\MkTurizm\\MkTurizm\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MK\\Desktop\\Yeni klasör\\MkTurizm\\MkTurizm\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Web ve Mobil Prog\\Desktop\\MkTurizm\\MkTurizm\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\MK\\Desktop\\Yeni klasör\\MkTurizm\\MkTurizm\\EntityLayer\\EntityLayer.csproj",
-        "packagesPath": "C:\\Users\\MK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MK\\Desktop\\Yeni klasör\\MkTurizm\\MkTurizm\\EntityLayer\\obj\\",
+        "projectPath": "C:\\Users\\Web ve Mobil Prog\\Desktop\\MkTurizm\\MkTurizm\\EntityLayer\\EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\Web ve Mobil Prog\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Web ve Mobil Prog\\Desktop\\MkTurizm\\MkTurizm\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MK\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Web ve Mobil Prog\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -60,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
