@@ -20,5 +20,13 @@ namespace DataAccessLayer.EntityFramework
               return  c.BusServices.Include(x=>x.Station).Where(x => x.Station.FromCity== fromcity && x.Station.ToCity == tocity).ToList();
             }
         }
+
+        public BusService BusServiceWithStationById(int id)
+        {
+            using (var c=new MKContext())
+            {
+                return c.BusServices.Include(x => x.Station).Where(x => x.BusServiceId==id).FirstOrDefault();
+            }
+        }
     }
 }

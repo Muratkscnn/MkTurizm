@@ -57,6 +57,21 @@ namespace DataAccessLayer.Migrations
                     b.ToTable("Cities");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.Seat", b =>
+                {
+                    b.Property<int>("SeatId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("SeatNo")
+                        .HasColumnType("int");
+
+                    b.HasKey("SeatId");
+
+                    b.ToTable("Seats");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.Station", b =>
                 {
                     b.Property<int>("StationId")

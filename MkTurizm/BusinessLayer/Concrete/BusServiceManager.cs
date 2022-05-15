@@ -28,6 +28,11 @@ namespace BusinessLayer.Concrete
             return _busservice.BusServiceList(tocity,fromcity);
         }
 
+        public BusService BusServiceWithStationById(int id)
+        {
+            return _busservice.BusServiceWithStationById(id);
+        }
+
         public void Delete(BusService t)
         {
             _busservice.Delete(t);

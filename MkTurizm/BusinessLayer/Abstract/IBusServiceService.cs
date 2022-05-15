@@ -10,6 +10,8 @@ namespace BusinessLayer.Abstract
     public interface IBusServiceService : IGenericService<BusService>
     {
         List<BusService> BusServiceList(string tocity, string fromcity);
+        BusService BusServiceWithStationById(int id);
+
 
     }
 }

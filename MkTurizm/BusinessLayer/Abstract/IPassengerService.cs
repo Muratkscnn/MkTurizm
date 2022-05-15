@@ -9,5 +9,7 @@ namespace BusinessLayer.Abstract
 {
     public interface IPassengerService : IGenericService<Passenger>
     {
+        Passenger GetLastPassenger();
+
     }
 }

@@ -9,6 +9,5 @@ namespace DataAccessLayer.Abstract
 {
     public interface IPassengerDal : IGenericDal<Passenger>
     {
-
     }
 }

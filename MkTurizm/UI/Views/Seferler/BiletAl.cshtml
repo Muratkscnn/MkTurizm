@@ -1,0 +1,61 @@
+﻿@model UI.Models.TicketAdd
+@{
+    ViewData["Title"] = "Bilet AL";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<style>
+    .cs-select ul {
+        height: 400px;
+        max-height: 400px;
+        overflow-x: hidden;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        @using (Html.BeginForm("BiletAl", "Seferler", FormMethod.Post))
+        {
+            <div class="form-group col-md-6" style="margin:15px 0">
+                <div class="col-md-12">
+                    @Html.Label("Ad Soyad")
+                    @Html.TextBoxFor(x => x.Passenger.PassengerName, new { @class = "form-control" })
+                </div>
+                <div class="col-md-12">
+                    @Html.Label("Tc No")
+                    @Html.TextBoxFor(x => x.Passenger.PassengerTc, new { @class = "form-control" })
+                </div>
+                <div class="col-md-12">
+                    @Html.Label("Telefon")
+                    @Html.TextBoxFor(x => x.Passenger.PassengerTel, new { @class = "form-control" })
+                </div>
+                <style>
+                </style>
+                <div class="col-md-12">
+                    @Html.Label("Koltuk Seçimi")
+                    @Html.DropDownListFor(x => x.Reservation.SeatNo, (List<SelectListItem>)ViewBag.sv, new { id="dropbox", @class = "cs-select cs-skin-border"  })
+
+                </div>
+                <div class="col-md-12">
+
+                    <input type="text" class="hidden" asp-for="Reservation.BusServiceId" value="@ViewBag.id" />
+                    <button class="btn btn-primary" style="margin-top:10px">Bilet AL</button>
+                </div>
+            </div>
+        }
+    <div class="col-md-4">
+        <label style="margin-top:15px;display:block;">Durak Bilgileri</label>
+        <span>@ViewBag.BusService.Station.ToCity <i class="fas fa-angle-double-right"></i></span>
+        <span>@ViewBag.BusService.Station.Station1 <i class="fas fa-angle-double-right"></i></span>
+        <span>@ViewBag.BusService.Station.Station2 <i class="fas fa-angle-double-right"></i></span>
+        <span>@ViewBag.BusService.Station.FromCity</span>
+
+        @await Component.InvokeAsync("Seat")
+
+    </div>
+    </div>
+</div>
+
+
+
+

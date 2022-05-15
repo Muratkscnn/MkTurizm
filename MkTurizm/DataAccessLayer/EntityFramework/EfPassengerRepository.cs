@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.Repositories;
 using EntityLayer;
 using System;
@@ -9,7 +10,8 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.EntityFramework
 {
-    public class EfPassengerRepository : GenericRepository<Passenger>,IPassengerDal
+    public class EfPassengerRepository : GenericRepository<Passenger>, IPassengerDal
     {
+        
     }
 }

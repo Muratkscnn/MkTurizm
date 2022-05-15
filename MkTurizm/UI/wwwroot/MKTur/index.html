@@ -1,15 +1,33 @@
 
 <!DOCTYPE html>
-<html class="no-js">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MK Turizm</title>
+	<title>Travel &mdash; 100% Free Fully Responsive HTML5 Template by FREEHTML5.co</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
 	<meta name="author" content="FREEHTML5.CO" />
 
+  <!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FREEHTML5.CO
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content=""/>
@@ -19,6 +37,8 @@
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
@@ -58,24 +78,26 @@
 			<div class="container">
 				<div class="nav-header">
 					<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-					<h1 id="fh5co-logo"><a href="index.html"><i class="icon-map"></i>&nbsp;MK Tur</a></h1>
+					<h1 id="fh5co-logo"><a href="index.html"><i class="icon-airplane"></i>Travel</a></h1>
 					<!-- START #fh5co-menu-wrap -->
 					<nav id="fh5co-menu-wrap" role="navigation">
 						<ul class="sf-menu" id="fh5co-primary-menu">
-							<li class="active"><a href="index.html">ANASAYFA</a></li>
+							<li class="active"><a href="index.html">Home</a></li>
 							<li>
-								<a href="vacation.html" class="fh5co-sub-ddown">SEYAHAT KILAVUZU</a>
+								<a href="vacation.html" class="fh5co-sub-ddown">Vacations</a>
 								<ul class="fh5co-sub-menu">
-									<li><a href="#">GENEL BİLGİLER</a></li>
-									<li><a href="#">YOLCU HAKLARI</a></li>
-									<li><a href="#">MOBİL UYGULAMALAR</a></li>
-									<li><a href="#">KVKK YASAL SÖZLEŞME</a></li>
+									<li><a href="#">Family</a></li>
+									<li><a href="#">CSS3 &amp; HTML5</a></li>
+									<li><a href="#">Angular JS</a></li>
+									<li><a href="#">Node JS</a></li>
+									<li><a href="#">Django &amp; Python</a></li>
 								</ul>
 							</li>
-							<li><a href="flight.html">YOLCUM NEREDE</a></li>
-							<li><a href="hotel.html">E-BİLET</a></li>
-							<li><a href="blog.html">BLOG</a></li>
-							<li><a href="contact.html">İLETİŞİM</a></li>
+							<li><a href="flight.html">Flights</a></li>
+							<li><a href="hotel.html">Hotel</a></li>
+							<li><a href="car.html">Car</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -83,9 +105,10 @@
 		</header>
 
 		<!-- end:header-top -->
+	
 		<div class="fh5co-hero">
-		<div class="fh5co-overlay"></div>
-			<div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image: url(https://www.metroturizm.com.tr/Assets/images/slider/Ek-sefer-slider-min.png);">
+			<div class="fh5co-overlay"></div>
+			<div class="fh5co-cover" data-stellar-background-ratio="0.5" style="background-image: url(images/banner.jpg);">
 				<div class="desc">
 					<div class="container">
 						<div class="row">
@@ -95,7 +118,13 @@
 								  <!-- Nav tabs -->
 								   <ul class="nav nav-tabs" role="tablist">
 								      <li role="presentation" class="active">
-								      	<a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">Otobüs Bileti</a>
+								      	<a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">Flights</a>
+								      </li>
+								      <li role="presentation">
+								    	   <a href="#hotels" aria-controls="hotels" role="tab" data-toggle="tab">Hotels</a>
+								      </li>
+								      <li role="presentation">
+								    	   <a href="#packages" aria-controls="packages" role="tab" data-toggle="tab">Packages</a>
 								      </li>
 								   </ul>
 
@@ -103,27 +132,56 @@
 									<div class="tab-content">
 									 <div role="tabpanel" class="tab-pane active" id="flights">
 										<div class="row">
-											<div class="col-xxs-12 col-xs-12 mt">
+											<div class="col-xxs-12 col-xs-6 mt">
 												<div class="input-field">
-													<label for="from">Kalkış</label>
-													<input type="text" class="form-control" id="from-place" placeholder="İstanbul"/>
+													<label for="from">From:</label>
+													<input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA"/>
 												</div>
 											</div>
-											<div class="col-xxs-12 col-xs-12 mt">
+											<div class="col-xxs-12 col-xs-6 mt">
 												<div class="input-field">
-													<label for="from">Varış</label>
-													<input type="text" class="form-control" id="to-place" placeholder="İzmir"/>
+													<label for="from">To:</label>
+													<input type="text" class="form-control" id="to-place" placeholder="Tokyo, Japan"/>
 												</div>
 											</div>
 											<div class="col-xxs-12 col-xs-6 mt alternate">
 												<div class="input-field">
-													<label for="date-start">Gidiş Tarihi</label>
-													<input type="text" class="form-control" id="date-start" placeholder="../../...."/>
+													<label for="date-start">Check In:</label>
+													<input type="text" class="form-control" id="date-start" placeholder="mm/dd/yyyy"/>
 												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt alternate">
+												<div class="input-field">
+													<label for="date-end">Check Out:</label>
+													<input type="text" class="form-control" id="date-end" placeholder="mm/dd/yyyy"/>
+												</div>
+											</div>
+											<div class="col-sm-12 mt">
+												<section>
+													<label for="class">Class:</label>
+													<select class="cs-select cs-skin-border">
+														<option value="" disabled selected>Economy</option>
+														<option value="economy">Economy</option>
+														<option value="first">First</option>
+														<option value="business">Business</option>
+													</select>
+												</section>
 											</div>
 											<div class="col-xxs-12 col-xs-6 mt">
 												<section>
-													<label for="class">Yolcu Sayısı</label>
+													<label for="class">Adult:</label>
+													<select class="cs-select cs-skin-border">
+														<option value="" disabled selected>1</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+													</select>
+												</section>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt">
+												<section>
+													<label for="class">Children:</label>
 													<select class="cs-select cs-skin-border">
 														<option value="" disabled selected>1</option>
 														<option value="1">1</option>
@@ -134,163 +192,207 @@
 												</section>
 											</div>
 											<div class="col-xs-12">
-												<input type="submit" class="btn btn-primary btn-block" value="SEFER SORGULA">
+												<input type="submit" class="btn btn-primary btn-block" value="Search Flight">
+											</div>
+										</div>
+									 </div>
+
+									 <div role="tabpanel" class="tab-pane" id="hotels">
+									 	<div class="row">
+											<div class="col-xxs-12 col-xs-12 mt">
+												<div class="input-field">
+													<label for="from">City:</label>
+													<input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA"/>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt alternate">
+												<div class="input-field">
+													<label for="date-start">Return:</label>
+													<input type="text" class="form-control" id="date-start" placeholder="mm/dd/yyyy"/>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt alternate">
+												<div class="input-field">
+													<label for="date-end">Check Out:</label>
+													<input type="text" class="form-control" id="date-end" placeholder="mm/dd/yyyy"/>
+												</div>
+											</div>
+											<div class="col-sm-12 mt">
+												<section>
+													<label for="class">Rooms:</label>
+													<select class="cs-select cs-skin-border">
+														<option value="" disabled selected>1</option>
+														<option value="economy">1</option>
+														<option value="first">2</option>
+														<option value="business">3</option>
+													</select>
+												</section>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt">
+												<section>
+													<label for="class">Adult:</label>
+													<select class="cs-select cs-skin-border">
+														<option value="" disabled selected>1</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+													</select>
+												</section>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt">
+												<section>
+													<label for="class">Children:</label>
+													<select class="cs-select cs-skin-border">
+														<option value="" disabled selected>1</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+													</select>
+												</section>
+											</div>
+											<div class="col-xs-12">
+												<input type="submit" class="btn btn-primary btn-block" value="Search Hotel">
+											</div>
+										</div>
+									 </div>
+
+									 <div role="tabpanel" class="tab-pane" id="packages">
+									 	<div class="row">
+											<div class="col-xxs-12 col-xs-6 mt">
+												<div class="input-field">
+													<label for="from">City:</label>
+													<input type="text" class="form-control" id="from-place" placeholder="Los Angeles, USA"/>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt">
+												<div class="input-field">
+													<label for="from">Destination:</label>
+													<input type="text" class="form-control" id="to-place" placeholder="Tokyo, Japan"/>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt alternate">
+												<div class="input-field">
+													<label for="date-start">Departs:</label>
+													<input type="text" class="form-control" id="date-start" placeholder="mm/dd/yyyy"/>
+												</div>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt alternate">
+												<div class="input-field">
+													<label for="date-end">Return:</label>
+													<input type="text" class="form-control" id="date-end" placeholder="mm/dd/yyyy"/>
+												</div>
+											</div>
+											<div class="col-sm-12 mt">
+												<section>
+													<label for="class">Rooms:</label>
+													<select class="cs-select cs-skin-border">
+														<option value="" disabled selected>1</option>
+														<option value="economy">1</option>
+														<option value="first">2</option>
+														<option value="business">3</option>
+													</select>
+												</section>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt">
+												<section>
+													<label for="class">Adult:</label>
+													<select class="cs-select cs-skin-border">
+														<option value="" disabled selected>1</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+													</select>
+												</section>
+											</div>
+											<div class="col-xxs-12 col-xs-6 mt">
+												<section>
+													<label for="class">Children:</label>
+													<select class="cs-select cs-skin-border">
+														<option value="" disabled selected>1</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+														<option value="3">3</option>
+														<option value="4">4</option>
+													</select>
+												</section>
+											</div>
+											<div class="col-xs-12">
+												<input type="submit" class="btn btn-primary btn-block" value="Search Packages">
 											</div>
 										</div>
 									 </div>
 									</div>
+
 								</div>
 							</div>
-							<!-- <div class="desc2 animate-box">
+							<div class="desc2 animate-box">
 								<div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1">
 									<p>HandCrafted by <a href="http://frehtml5.co/" target="_blank" class="fh5co-site-name">FreeHTML5.co</a></p>
 									<h2>Exclusive Limited Time Offer</h2>
 									<h3>Fly to Hong Kong via Los Angeles, USA</h3>
 									<span class="price">$599</span>
+									<!-- <p><a class="btn btn-primary btn-lg" href="#">Get Started</a></p> -->
 								</div>
-							</div>  -->
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
 		</div>
-		
 		
 		<div id="fh5co-tours" class="fh5co-section-gray">
 			<div class="container">
 				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+						<h3>Hot Tours</h3>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-						<div href="#"><img src="https://izmir.ktb.gov.tr/Resim/68383,konakjpg.png?0" style="height: 350px"  alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+						<div href="#"><img src="images/place-1.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
 							<div class="desc">
 								<span></span>
-								<h3>İSTANBUL-İZMİR</h3>
-								<span>7 Saat</span>
-								<span class="price">350₺</span>
-								<a class="btn btn-primary btn-outline" href="#">Hemen Al <i class="icon-arrow-right22"></i></a>
+								<h3>New York</h3>
+								<span>3 nights + Flight 5*Hotel</span>
+								<span class="price">$1,000</span>
+								<a class="btn btn-primary btn-outline" href="#">Book Now <i class="icon-arrow-right22"></i></a>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-						<div href="#"><img src="https://metropolkurslari.com/wp-content/uploads/2021/06/metropol-kurslari-antalya-alanya-subesi-acildi.jpeg" style="height: 350px" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+						<div href="#"><img src="images/place-2.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
 							<div class="desc">
 								<span></span>
-								<h3>İSTANBUL-ALANYA</h3>
-								<span>14 Saat 25 Dakika</span>
-								<span class="price">440₺</span>
-								<a class="btn btn-primary btn-outline" href="#">Hemen Al <i class="icon-arrow-right22"></i></a>
+								<h3>Philippines</h3>
+								<span>4 nights + Flight 5*Hotel</span>
+								<span class="price">$1,000</span>
+								<a class="btn btn-primary btn-outline" href="#">Book Now <i class="icon-arrow-right22"></i></a>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
-						<div href="#"><img src="https://img-s1.onedio.com/id-61db672e039a35f425fd7929/rev-0/w-620/f-jpg/s-d5baa286e3c9e907b5e3856ba492d2f10f585922.jpg" style="height: 350px" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+						<div href="#"><img src="images/place-3.jpg" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
 							<div class="desc">
 								<span></span>
-								<h3>MARMARİS-GELİBOLU</h3>
-								<span>10 Saat 45 Dakika</span>
-								<span class="price">329₺</span>
-								<a class="btn btn-primary btn-outline" href="#">Hemen Al <i class="icon-arrow-right22"></i></a>
+								<h3>Hongkong</h3>
+								<span>2 nights + Flight 4*Hotel</span>
+								<span class="price">$1,000</span>
+								<a class="btn btn-primary btn-outline" href="#">Book Now <i class="icon-arrow-right22"></i></a>
 							</div>
 						</div>
 					</div>
 					<div class="col-md-12 text-center animate-box">
-						<p><a class="btn btn-primary btn-outline btn-lg" href="#">TÜM TEKLİFLERİ GÖR <i class="icon-arrow-right22"></i></a></p>
+						<p><a class="btn btn-primary btn-outline btn-lg" href="#">See All Offers <i class="icon-arrow-right22"></i></a></p>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div id="fh5co-destination">
-			<div class="tour-fluid">
-				<div class="row">
-					<div class="col-md-12">
-						<ul id="fh5co-destination-list" class="animate-box">
-							<li class="one-forth text-center" style="background-image: url(https://demos.freehtml5.co/travel/images/place-1.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>İstanbul</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-forth text-center" style="background-image: url(https://demos.freehtml5.co/travel/images/place-2.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>İzmir</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-forth text-center" style="background-image:url(https://demos.freehtml5.co/travel/images/place-2.jpg)";>
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Ankara</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-forth text-center" style="background-image: url(https://demos.freehtml5.co/travel/images/place-4.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Trabzon</h2>
-									</div>
-								</a>
-							</li>
-
-							<li class="one-forth text-center" style="background-image: url(https://demos.freehtml5.co/travel/images/place-5.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Gaziantep</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-half text-center">
-								<div class="title-bg">
-									<div class="case-studies-summary">
-										<h2>En Popüler Seyahatler</h2>
-										<span><a href="#">Hepsini görmek için TIKLAYIN</a></span>
-									</div>
-								</div>
-							</li>
-							<li class="one-forth text-center" style="background-image: url(https://demos.freehtml5.co/travel/images/place-6.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Antalya</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-forth text-center" style="background-image: url(https://demos.freehtml5.co/travel/images/place-7.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Mersin</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-forth text-center" style="background-image: url(https://demos.freehtml5.co/travel/images/place-8.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Nevşehir</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-forth text-center" style="background-image: url(https://demos.freehtml5.co/travel/images/place-9.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Çanakkale</h2>
-									</div>
-								</a>
-							</li>
-							<li class="one-forth text-center" style="background-image: url(https://demos.freehtml5.co/travel/images/place-10.jpg); ">
-								<a href="#">
-									<div class="case-studies-summary">
-										<h2>Muğla</h2>
-									</div>
-								</a>
-							</li>
-						</ul>		
-					</div>
-				</div>
-			</div>
-		</div>
 		<div id="fh5co-features">
 			<div class="container">
 				<div class="row">
@@ -380,7 +482,95 @@
 		</div>
 
 		
-		
+		<div id="fh5co-destination">
+			<div class="tour-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<ul id="fh5co-destination-list" class="animate-box">
+							<li class="one-forth text-center" style="background-image: url(images/place-1.jpg); ">
+								<a href="#">
+									<div class="case-studies-summary">
+										<h2>Los Angeles</h2>
+									</div>
+								</a>
+							</li>
+							<li class="one-forth text-center" style="background-image: url(images/place-2.jpg); ">
+								<a href="#">
+									<div class="case-studies-summary">
+										<h2>Hongkong</h2>
+									</div>
+								</a>
+							</li>
+							<li class="one-forth text-center" style="background-image: url(images/place-3.jpg); ">
+								<a href="#">
+									<div class="case-studies-summary">
+										<h2>Italy</h2>
+									</div>
+								</a>
+							</li>
+							<li class="one-forth text-center" style="background-image: url(images/place-4.jpg); ">
+								<a href="#">
+									<div class="case-studies-summary">
+										<h2>Philippines</h2>
+									</div>
+								</a>
+							</li>
+
+							<li class="one-forth text-center" style="background-image: url(images/place-5.jpg); ">
+								<a href="#">
+									<div class="case-studies-summary">
+										<h2>Japan</h2>
+									</div>
+								</a>
+							</li>
+							<li class="one-half text-center">
+								<div class="title-bg">
+									<div class="case-studies-summary">
+										<h2>Most Popular Destinations</h2>
+										<span><a href="#">View All Destinations</a></span>
+									</div>
+								</div>
+							</li>
+							<li class="one-forth text-center" style="background-image: url(images/place-6.jpg); ">
+								<a href="#">
+									<div class="case-studies-summary">
+										<h2>Paris</h2>
+									</div>
+								</a>
+							</li>
+							<li class="one-forth text-center" style="background-image: url(images/place-7.jpg); ">
+								<a href="#">
+									<div class="case-studies-summary">
+										<h2>Singapore</h2>
+									</div>
+								</a>
+							</li>
+							<li class="one-forth text-center" style="background-image: url(images/place-8.jpg); ">
+								<a href="#">
+									<div class="case-studies-summary">
+										<h2>Madagascar</h2>
+									</div>
+								</a>
+							</li>
+							<li class="one-forth text-center" style="background-image: url(images/place-9.jpg); ">
+								<a href="#">
+									<div class="case-studies-summary">
+										<h2>Egypt</h2>
+									</div>
+								</a>
+							</li>
+							<li class="one-forth text-center" style="background-image: url(images/place-10.jpg); ">
+								<a href="#">
+									<div class="case-studies-summary">
+										<h2>Indonesia</h2>
+									</div>
+								</a>
+							</li>
+						</ul>		
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div id="fh5co-blog-section" class="fh5co-section-gray">
 			<div class="container">

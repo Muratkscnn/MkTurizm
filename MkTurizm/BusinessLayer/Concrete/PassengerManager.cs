@@ -33,6 +33,11 @@ namespace BusinessLayer.Concrete
             return _passengerDal.GetByID(id);
         }
 
+        public Passenger GetLastPassenger()
+        {
+            return _passengerDal.GetListAll().LastOrDefault();
+        }
+
         public List<Passenger> GetList()
         {
             return _passengerDal.GetListAll();

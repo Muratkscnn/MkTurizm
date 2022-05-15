@@ -1,0 +1,36 @@
+﻿@model List<EntityLayer.Reservation>
+<link href="~/MKTur/css/Koltuk.css" rel="stylesheet" />
+<div class="BusSeat">
+    @{
+        var x = 1;
+        bool y = true;
+    }
+    @for (int i = 0; i < 10; i++)
+    {
+        <div class="seats">
+            @for (int j = 0; j < 3; j++)
+            {
+                @foreach (var item in Model)
+                {
+                    if (item.SeatNo == x)
+                    {
+                        <div class="seat">
+                            <input type="checkbox" hidden id="@x" />
+                            <label for="@x">@(x<10 ? x.ToString().Insert(0, "0") : x.ToString())<img src="~/MKTur/images/office-chair.png" /></label>
+                        </div>
+                        y = false;
+                    }
+                }
+                if (y)
+                {
+                    <div class="seat">
+                        <input type="checkbox" hidden id="@x" />
+                        <label for="@x">@(x<10 ? x.ToString().Insert(0, "0") : x.ToString())<img src="~/MKTur/images/office-chair (1).png" /></label>
+                    </div>
+                }
+                y = true;
+                x++;
+            }
+        </div>
+    }
+</div>

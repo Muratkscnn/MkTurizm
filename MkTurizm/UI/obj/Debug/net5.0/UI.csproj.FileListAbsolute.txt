@@ -454,5 +454,7 @@ C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\UI.dll
 C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\ref\UI.dll
 C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\UI.pdb
 C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\UI.genruntimeconfig.cache
-C:\Users\MK\Desktop\Yeni klasör\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\Razor\Views\Home\SeferBilgileri.cshtml.g.cs
 C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\Razor\Views\Home\SeferBilgileri.cshtml.g.cs
+C:\Users\MK\Desktop\Yeni klasör\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\Razor\Views\Seferler\BiletAl.cshtml.g.cs
+C:\Users\MK\Desktop\Yeni klasör\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\Razor\Views\Seferler\Index.cshtml.g.cs
+C:\Users\MK\Desktop\Yeni klasör\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\Razor\Views\Shared\Components\Seat\Default.cshtml.g.cs

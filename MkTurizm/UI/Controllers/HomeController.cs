@@ -15,7 +15,6 @@ namespace UI.Controllers
 {
     public class HomeController : Controller
     {
-        BusServiceManager bm = new BusServiceManager(new EfBusServiceRepository());
 
         CityManager cm = new CityManager(new EfCityRepository());
         public IActionResult Index()
@@ -28,22 +27,6 @@ namespace UI.Controllers
                                                    }).ToList();
             ViewBag.cv = cityValues;
             return View();
-        }
-        [HttpPost]
-        public IActionResult SeferBilgileri(Station s)
-        {
-            string toCity = s.ToCity;
-            string fromCity = s.FromCity;
-            //var values = bm.GetList();
-            var values = bm.BusServiceList(toCity,fromCity);
-
-            return View(values);
-        }
-        [HttpPost]
-        public IActionResult TicketAdd(int id)
-        {
-            var values = bm.GetById(id);
-            return View(values);
         }
     }
 
