@@ -44,15 +44,19 @@ namespace UI.Controllers
         [HttpPost]
         public IActionResult BiletAl(TicketAdd t)
         {
-           
+            Random rnd = new Random();
+            int pnrno = rnd.Next();
 
             var p = new Passenger() { PassengerName = t.Passenger.PassengerName, PassengerTel = t.Passenger.PassengerTel, PassengerTc = t.Passenger.PassengerTc };
             pm.Add(p);
             var lastPassenger = pm.GetLastPassenger();
-            var r = new Reservation() { BusServiceId = t.Reservation.BusServiceId, PassengerId = lastPassenger.PassengerId,SeatNo=t.Reservation.SeatNo };
+            var r = new Reservation() { BusServiceId = t.Reservation.BusServiceId, PassengerId = lastPassenger.PassengerId,SeatNo=t.Reservation.SeatNo,PnrNo=pnrno };
             rm.Add(r);
-            return RedirectToAction("Index", "Home");
-
+            return RedirectToAction("BiletBilgileri",r);
+        }
+        public IActionResult BiletBilgileri(Reservation r)
+        {
+            return View(r);
         }
     }
 }

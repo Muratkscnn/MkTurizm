@@ -2,6 +2,7 @@
 using DataAccessLayer.Concrete;
 using DataAccessLayer.Repositories;
 using EntityLayer;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,6 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfPassengerRepository : GenericRepository<Passenger>, IPassengerDal
     {
-        
+       
     }
 }

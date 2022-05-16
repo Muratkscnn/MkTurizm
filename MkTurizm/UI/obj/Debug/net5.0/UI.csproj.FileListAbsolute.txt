@@ -458,3 +458,4 @@ C:\Users\Web ve Mobil Prog\Desktop\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\Razor\V
 C:\Users\MK\Desktop\Yeni klasör\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\Razor\Views\Seferler\BiletAl.cshtml.g.cs
 C:\Users\MK\Desktop\Yeni klasör\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\Razor\Views\Seferler\Index.cshtml.g.cs
 C:\Users\MK\Desktop\Yeni klasör\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\Razor\Views\Shared\Components\Seat\Default.cshtml.g.cs
+C:\Users\MK\Desktop\Yeni klasör\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\Razor\Views\Seferler\BiletBilgileri.cshtml.g.cs

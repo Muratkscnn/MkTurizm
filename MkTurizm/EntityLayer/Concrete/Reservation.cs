@@ -14,7 +14,6 @@ namespace EntityLayer
         public int BusServiceId { get; set; }
         public int SeatNo { get; set; }
         public BusService BusService { get; set; }
-
-
+        public int PnrNo { get; set; }
     }
 }

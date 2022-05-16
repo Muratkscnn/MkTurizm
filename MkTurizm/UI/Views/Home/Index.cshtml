@@ -18,13 +18,13 @@
                             <!-- Nav tabs -->
                             <ul class="nav nav-tabs" role="tablist">
                                 <li role="presentation" class="active">
-                                    <a href="#flights" aria-controls="flights" role="tab" data-toggle="tab">Otobüs Bileti</a>
+                                    <a href="#otobus" aria-controls="flights" role="tab" data-toggle="tab">Otobüs Bileti</a>
                                 </li>
                             </ul>
 
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active" id="flights">
+                                <div role="tabpanel" class="tab-pane active" id="flight">
                                     @using (Html.BeginForm("Index", "Seferler", FormMethod.Post))
                                     {
                                         <div class="row">
@@ -67,19 +67,149 @@
                                 </div>
                             </div>
                         </div>
+
+
                     </div>
 
-                    <!-- <div class="desc2 animate-box">
-        <div class="col-sm-7 col-sm-push-1 col-md-7 col-md-push-1">
-            <p>HandCrafted by <a href="http://frehtml5.co/" target="_blank" class="fh5co-site-name">FreeHTML5.co</a></p>
-            <h2>Exclusive Limited Time Offer</h2>
-            <h3>Fly to Hong Kong via Los Angeles, USA</h3>
-            <span class="price">$599</span>
-        </div>
-    </div>  -->
                 </div>
             </div>
         </div>
     </div>
 
+</div>
+<div id="fh5co-tours" class="fh5co-section-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+                <h3>En çok tercih edilen seyahatler</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
+                <div href="#">
+                    <img src="https://cdnp.flypgs.com/files/Sehirler-long-tail/Gaziantep/gaziantep-sehir-rehberi.jpg" style="height:300px" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+                    <div class="desc">
+                        <span></span>
+                        <h3>İstanbul-Gaziantep</h3>
+                        <span class="price">500 ₺</span>
+                        <a class="btn btn-primary btn-outline" href="#Otobus">Hemen Satın Al <i class="icon-arrow-right22"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
+                <div href="#">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/b0/e9/fb/photo3jpg.jpg?w=600&h=400&s=1" style="height:300px" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+                    <div class="desc">
+                        <span></span>
+                        <h3>Karabük</h3>
+                        <span class="price">300 ₺</span>
+                        <a class="btn btn-primary btn-outline" href="#Otobus">Hemen Satın Al<i class="icon-arrow-right22"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 fh5co-tours animate-box" data-animate-effect="fadeIn">
+                <div href="#">
+                    <img src="https://blog.biletbayi.com/wp-content/uploads/2021/02/karabuk-tarihi-yerler.jpg" style="height:300px" alt="Free HTML5 Website Template by FreeHTML5.co" class="img-responsive">
+                    <div class="desc">
+                        <span></span>
+                        <h3>Bolu</h3>
+                        <span class="price">200 ₺</span>
+                        <a class="btn btn-primary btn-outline" href="#Otobus">Hemen Satın Al <i class="icon-arrow-right22"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 text-center animate-box">
+                <p><a class="btn btn-primary btn-outline btn-lg" href="#Otobus">Tüm Teklifleri Gör <i class="icon-arrow-right22"></i></a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="fh5co-destination">
+    <div class="tour-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <ul id="fh5co-destination-list" class="animate-box">
+                    <li class="one-forth text-center" style="background-image: url(images/place-1.jpg); ">
+                        <a href="#">
+                            <div class="case-studies-summary">
+                                <h2>İstanbul</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="one-forth text-center" style="background-image: url(images/place-2.jpg); ">
+                        <a href="#">
+                            <div class="case-studies-summary">
+                                <h2>Ankara</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="one-forth text-center" style="background-image: url(images/place-3.jpg); ">
+                        <a href="#">
+                            <div class="case-studies-summary">
+                                <h2>Trabzon</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="one-forth text-center" style="background-image: url(images/place-4.jpg); ">
+                        <a href="#">
+                            <div class="case-studies-summary">
+                                <h2>İzmir</h2>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="one-forth text-center" style="background-image: url(images/place-5.jpg); ">
+                        <a href="#">
+                            <div class="case-studies-summary">
+                                <h2>Gaziantep</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="one-half text-center">
+                        <div class="title-bg">
+                            <div class="case-studies-summary">
+                                <h2>ÇALIŞTIĞIMIZ ŞEHİRLER</h2>
+                                <span><a href="#">Bilgi için tıklayınız.</a></span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="one-forth text-center" style="background-image: url(images/place-6.jpg); ">
+                        <a href="#">
+                            <div class="case-studies-summary">
+                                <h2>Kocaeli</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="one-forth text-center" style="background-image: url(images/place-7.jpg); ">
+                        <a href="#">
+                            <div class="case-studies-summary">
+                                <h2>Antalya</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="one-forth text-center" style="background-image: url(images/place-8.jpg); ">
+                        <a href="#">
+                            <div class="case-studies-summary">
+                                <h2>Hakkari</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="one-forth text-center" style="background-image: url(images/place-9.jpg); ">
+                        <a href="#">
+                            <div class="case-studies-summary">
+                                <h2>Mersin</h2>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="one-forth text-center" style="background-image: url(images/place-10.jpg); ">
+                        <a href="#">
+                            <div class="case-studies-summary">
+                                <h2>Çanakkale</h2>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
