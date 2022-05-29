@@ -10,5 +10,7 @@ namespace BusinessLayer.Abstract
     public interface IReservationService : IGenericService<Reservation>
     {
         List<Reservation> GetReservationWithBusService(int id);
+        Reservation GetReservationWithAllDetails(int Pnr);
+
     }
 }

@@ -20,11 +20,14 @@
                                 <li role="presentation" class="active">
                                     <a href="#otobus" aria-controls="flights" role="tab" data-toggle="tab">Otobüs Bileti</a>
                                 </li>
+                                <li role="presentation">
+                                    <a href="#Bilet" aria-controls="hotels" role="tab" data-toggle="tab">Hotels</a>
+                                </li>
                             </ul>
 
                             <!-- Tab panes -->
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active" id="flight">
+                                <div role="tabpanel" class="tab-pane active" id="otobus">
                                     @using (Html.BeginForm("Index", "Seferler", FormMethod.Post))
                                     {
                                         <div class="row">
@@ -65,6 +68,26 @@
                                         </div>
                                     }
                                 </div>
+                                <div role="tabpanel" class="tab-pane" id="Bilet">
+                                    @using (Html.BeginForm("Index", "Bilet", FormMethod.Post))
+                                    {
+                                        <div class="row">
+                                            <div class="col-xxs-12 col-xs-12 mt">
+                                                <div class="input-field">
+                                                    <label for="toCity">PNR NO</label>
+                                                    <input type="text" name="Pnr" class="form-control" value="" />
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12">
+                                                <input type="submit" class="btn btn-primary btn-block" value="Bilet Detayları">
+                                            </div>
+
+                                        </div>
+                                    }
+
+                                </div>
+
+
                             </div>
                         </div>
 

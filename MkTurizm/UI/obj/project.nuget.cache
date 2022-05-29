@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z88I904g6uajur5swYtBL59Ea55W2uQrnsWVEZ6xDwFqvmqxJ7GG5Td4+sv9f5B19GlYYziNM+qhB2DyaWcywg==",
+  "dgSpecHash": "cxUn5DOl2vbjH1PDGjSRuTRIy9/Dw75KogMYZj+kD2htdHyq8YPbMB9XaoXgaq0JGMaAXh7NomUlgPBLJkACBQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MK\\Desktop\\Yeni klasör\\MkTurizm\\MkTurizm\\UI\\UI.csproj",
+  "projectFilePath": "C:\\Users\\MK\\Desktop\\Yeni Klasör\\MkTurizm\\MkTurizm\\UI\\UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MK\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\MK\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

@@ -13,6 +13,14 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfReservationRepository : GenericRepository<Reservation>, IReservationDal
     {
+        public Reservation GetReservationWithAllDetails(int Pnr)
+        {
+            using (var c = new MKContext())
+            {
+                var values= c.Reservations.Include(x => x.BusService).ThenInclude(y => y.Station).Include(x => x.Passenger).Where(x => x.PnrNo == Pnr).FirstOrDefault();
+                return values;
+            }
+        }
 
         public List<Reservation> GetReservationWithBusService(int id)
         {

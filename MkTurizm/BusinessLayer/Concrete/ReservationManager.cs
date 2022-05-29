@@ -38,6 +38,12 @@ namespace BusinessLayer.Concrete
             return _reservationDal.GetListAll();
         }
 
+        public Reservation GetReservationWithAllDetails(int Pnr)
+        {
+            return _reservationDal.GetReservationWithAllDetails(Pnr);
+
+        }
+
         public List<Reservation> GetReservationWithBusService(int id)
         {
             return _reservationDal.GetReservationWithBusService(id);

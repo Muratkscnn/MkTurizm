@@ -1,0 +1,32 @@
+﻿@model EntityLayer.Reservation
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="container" style="margin-top:50px;margin-bottom:200px;">
+    <table class="table">
+        <tr>
+            <th>Yolcu Adı</th>
+            <th>Kalkış</th>
+            <th>Varış</th>
+            <th>Koltuk No</th>
+            <th>Tarih</th>
+            <th>İşlem</th>
+        </tr>
+        <tr>
+            <td>@Model.Passenger.PassengerName</td>
+            <td>@Model.BusService.Station.ToCity</td>
+            <td>@Model.BusService.Station.FromCity</td>
+            <td>@Model.SeatNo</td>
+            <td>@Model.BusService.Date</td>
+            <form Asp-controller="Bilet" Asp-Action="DeleteTicket" method="post">
+                @Html.HiddenFor(x=>x.BusServiceId)
+                @Html.HiddenFor(x=>x.PassengerId)
+                @Html.HiddenFor(x=>x.PnrNo)
+                @Html.HiddenFor(x=>x.SeatNo)
+            <td><button type="submit" class="btn btn-danger">Bilet İPTAL</button></td>
+            </form>
+        </tr>
+    </table>
+</div>

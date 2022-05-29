@@ -10,6 +10,7 @@ namespace DataAccessLayer.Abstract
     public interface IReservationDal : IGenericDal<Reservation>
     {
         List<Reservation> GetReservationWithBusService(int id);
+        Reservation GetReservationWithAllDetails(int Pnr);
 
     }
 }

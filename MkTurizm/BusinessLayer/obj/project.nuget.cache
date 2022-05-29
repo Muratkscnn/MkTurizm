@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "594WHxYemcVSp/ZQ0bHHewA3aTAQb4na06fEsVWDJGlePL8tKm1jzUmUVuQnFjEyJUdNsB/ilQB350OqG67oxA==",
+  "dgSpecHash": "xKfXS0F4JVLBXFkM9ufbiT1klm+V6xULn4cd15rbO4DhQu+JSKhnk/W/yk9g2jOc6O2gpORhroG+Y+6Y1+0jJg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MK\\Desktop\\Yeni klasör\\MkTurizm\\MkTurizm\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\MK\\Desktop\\Yeni Klasör\\MkTurizm\\MkTurizm\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MK\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\MK\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
