@@ -1,4 +1,5 @@
-﻿using EntityLayer;
+﻿using DataAccessLayer.Concrete.EntityConfig;
+using EntityLayer;
 using EntityLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -13,7 +14,8 @@ namespace DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-             optionsBuilder.UseSqlServer("Server=MK\\SQLEXPRESS;Database=MkTurizmDb;integrated security=true;");
+             //optionsBuilder.UseSqlServer("Server=MK\\SQLEXPRESS;Database=MkTurizmDb;integrated security=true;");
+             optionsBuilder.UseSqlServer("Server=MK\\SQLEXPRESS;Database=DenemeMKTur;integrated security=true;");
            // optionsBuilder.UseSqlServer("Server=DESKTOP-8M7D7GE\\SQLEXPRESS;Database=MkTurizm;integrated security=true;");
 
         }
@@ -27,7 +29,10 @@ namespace DataAccessLayer.Concrete
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Reservation>().HasKey(pc => new { pc.BusServiceId, pc.SeatNo });
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(PassengerConfig).Assembly);
+
         }
+      
 
     }
 }
