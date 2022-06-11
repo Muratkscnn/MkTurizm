@@ -1,0 +1,60 @@
+﻿@model LoginModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INSPINIA | Login</title>
+
+    <link href="~/inspinia-gh-pages/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/inspinia-gh-pages/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="~/inspinia-gh-pages/css/animate.css" rel="stylesheet">
+    <link href="~/inspinia-gh-pages/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+        <div>
+            <div>
+
+                <h1 class="logo-name">MK</h1>
+
+            </div>
+            <h3>MK Turizm'e Hoşgeldin</h3>
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+                <form class="m-t" role="form" asp-action="Login" asp-controller="Account">
+                    <div class="form-group">
+                        <input type="text" asp-for="UserName" class="form-control" placeholder="Kullanıcı Adı" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" asp-for="Password" class="form-control" placeholder="Şifre" required="">
+                    </div>
+                    <button type="submit" class="btn btn-primary block full-width m-b">Giriş Yap</button>
+
+                    <a href="/Account/ForgotPassword"><small>Şifreni mi unuttun?</small></a>
+                    <p class="text-muted text-center"><small>Bir hesabın yok mu?</small></p>
+                    <a class="btn btn-sm btn-white btn-block" href="/Account/Register">Yeni hesap oluştur</a>
+                </form>
+                <p class="m-t"> <small>Tüm Hakları Saklıdır &copy; @DateTime.Now.Year</small> </p>
+            </div>
+        </div>
+    
+    <!-- Mainly scripts -->
+    <script src="~/inspinia-gh-pages/js/jquery-3.1.1.min.js"></script>
+    <script src="~/inspinia-gh-pages/js/popper.min.js"></script>
+    <script src="~/inspinia-gh-pages/js/bootstrap.js"></script>
+
+</body>
+
+</html>

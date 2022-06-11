@@ -16,7 +16,7 @@
     <div class="row">
         @using (Html.BeginForm("BiletAl", "Seferler", FormMethod.Post))
         {
-            <div class="form-group col-md-6" style="margin:15px 0">
+            <div class="form-group col-md-6" style="margin:50px 0">
                 <div class="col-md-12">
                     @Html.Label("Ad Soyad")
                     @Html.TextBoxFor(x => x.Passenger.PassengerName, new { @class = "form-control" })
@@ -44,7 +44,7 @@
             </div>
         }
     <div class="col-md-4">
-        <label style="margin-top:15px;display:block;">Durak Bilgileri</label>
+        <label style="margin-top:50px;display:block;">Durak Bilgileri</label>
         <span>@ViewBag.BusService.Station.ToCity <i class="fas fa-angle-double-right"></i></span>
         <span>@ViewBag.BusService.Station.Station1 <i class="fas fa-angle-double-right"></i></span>
         <span>@ViewBag.BusService.Station.Station2 <i class="fas fa-angle-double-right"></i></span>

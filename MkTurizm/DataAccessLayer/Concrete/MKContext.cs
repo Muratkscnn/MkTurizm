@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer.Concrete.EntityConfig;
 using EntityLayer;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Concrete
 {
-    class MKContext : DbContext
+    public class MKContext : IdentityDbContext<AppUser,AppRole, int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -30,9 +31,9 @@ namespace DataAccessLayer.Concrete
         {
             modelBuilder.Entity<Reservation>().HasKey(pc => new { pc.BusServiceId, pc.SeatNo });
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(PassengerConfig).Assembly);
-
+            base.OnModelCreating(modelBuilder);
         }
-      
+
 
     }
 }

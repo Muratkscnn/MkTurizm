@@ -2,6 +2,7 @@
 using DataAccessLayer.EntityFramework;
 using EntityLayer;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
@@ -12,6 +13,8 @@ using UI.Models;
 
 namespace UI.Controllers
 {
+    [AllowAnonymous]
+
     public class SeferlerController : Controller
     {
         PassengerManager pm = new PassengerManager(new EfPassengerRepository());
