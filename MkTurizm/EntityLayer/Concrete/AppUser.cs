@@ -11,7 +11,7 @@ namespace EntityLayer.Concrete
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string TcBo { get; set; }
-
+        public string TcNo { get; set; }
+        public List<Reservation> Reservations { get; set; }
     }
 }

@@ -101,7 +101,7 @@ namespace DataAccessLayer.Migrations
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TcBo")
+                    b.Property<string>("TcNo")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("TwoFactorEnabled")
@@ -134,15 +134,33 @@ namespace DataAccessLayer.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("StationId")
+                    b.Property<int>("FromCityId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Station1Id")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Station2Id")
                         .HasColumnType("int");
 
                     b.Property<bool>("Status")
                         .HasColumnType("bit");
 
+                    b.Property<int>("ToCityId")
+                        .HasColumnType("int");
+
                     b.HasKey("BusServiceId");
 
-                    b.HasIndex("StationId");
+                    b.HasIndex("FromCityId");
+
+                    b.HasIndex("Station1Id");
+
+                    b.HasIndex("Station2Id");
+
+                    b.HasIndex("ToCityId");
 
                     b.ToTable("BusServices");
 
@@ -151,106 +169,95 @@ namespace DataAccessLayer.Migrations
                         {
                             BusServiceId = 1,
                             Date = new DateTime(2022, 5, 12, 20, 0, 0, 0, DateTimeKind.Unspecified),
-                            StationId = 1,
-                            Status = true
+                            FromCityId = 2,
+                            Price = 100,
+                            Station1Id = 3,
+                            Status = true,
+                            ToCityId = 1
                         },
                         new
                         {
                             BusServiceId = 2,
-                            Date = new DateTime(2022, 5, 12, 19, 0, 0, 0, DateTimeKind.Unspecified),
-                            StationId = 2,
-                            Status = true
+                            Date = new DateTime(2022, 5, 13, 19, 0, 0, 0, DateTimeKind.Unspecified),
+                            FromCityId = 3,
+                            Price = 100,
+                            Station1Id = 2,
+                            Station2Id = 3,
+                            Status = true,
+                            ToCityId = 1
                         },
                         new
                         {
                             BusServiceId = 3,
-                            Date = new DateTime(2022, 5, 12, 18, 0, 0, 0, DateTimeKind.Unspecified),
-                            StationId = 3,
-                            Status = true
+                            Date = new DateTime(2022, 5, 13, 18, 0, 0, 0, DateTimeKind.Unspecified),
+                            FromCityId = 4,
+                            Price = 200,
+                            Station1Id = 2,
+                            Station2Id = 3,
+                            Status = true,
+                            ToCityId = 1
                         },
                         new
                         {
                             BusServiceId = 4,
-                            Date = new DateTime(2022, 5, 12, 17, 0, 0, 0, DateTimeKind.Unspecified),
-                            StationId = 4,
-                            Status = true
+                            Date = new DateTime(2022, 5, 13, 17, 0, 0, 0, DateTimeKind.Unspecified),
+                            FromCityId = 5,
+                            Price = 300,
+                            Station1Id = 2,
+                            Station2Id = 3,
+                            Status = true,
+                            ToCityId = 1
                         },
                         new
                         {
                             BusServiceId = 5,
                             Date = new DateTime(2022, 5, 12, 16, 0, 0, 0, DateTimeKind.Unspecified),
-                            StationId = 5,
-                            Status = true
+                            FromCityId = 6,
+                            Price = 400,
+                            Station1Id = 3,
+                            Station2Id = 5,
+                            Status = true,
+                            ToCityId = 1
                         },
                         new
                         {
                             BusServiceId = 6,
-                            Date = new DateTime(2022, 5, 12, 13, 0, 0, 0, DateTimeKind.Unspecified),
-                            StationId = 6,
-                            Status = true
+                            Date = new DateTime(2022, 5, 13, 13, 0, 0, 0, DateTimeKind.Unspecified),
+                            FromCityId = 6,
+                            Price = 400,
+                            Station1Id = 4,
+                            Station2Id = 5,
+                            Status = true,
+                            ToCityId = 1
                         },
                         new
                         {
                             BusServiceId = 7,
                             Date = new DateTime(2022, 5, 12, 14, 0, 0, 0, DateTimeKind.Unspecified),
-                            StationId = 7,
-                            Status = true
+                            FromCityId = 6,
+                            Price = 500,
+                            Status = true,
+                            ToCityId = 1
                         },
                         new
                         {
                             BusServiceId = 8,
                             Date = new DateTime(2022, 5, 12, 12, 0, 0, 0, DateTimeKind.Unspecified),
-                            StationId = 8,
-                            Status = true
+                            FromCityId = 2,
+                            Price = 100,
+                            Status = true,
+                            ToCityId = 1
                         },
                         new
                         {
                             BusServiceId = 9,
-                            Date = new DateTime(2022, 5, 12, 18, 0, 0, 0, DateTimeKind.Unspecified),
-                            StationId = 9,
-                            Status = true
-                        },
-                        new
-                        {
-                            BusServiceId = 10,
-                            Date = new DateTime(2022, 5, 12, 19, 0, 0, 0, DateTimeKind.Unspecified),
-                            StationId = 10,
-                            Status = true
-                        },
-                        new
-                        {
-                            BusServiceId = 11,
-                            Date = new DateTime(2022, 5, 12, 23, 0, 0, 0, DateTimeKind.Unspecified),
-                            StationId = 11,
-                            Status = true
-                        },
-                        new
-                        {
-                            BusServiceId = 12,
-                            Date = new DateTime(2022, 5, 12, 22, 0, 0, 0, DateTimeKind.Unspecified),
-                            StationId = 2,
-                            Status = true
-                        },
-                        new
-                        {
-                            BusServiceId = 13,
-                            Date = new DateTime(2022, 5, 12, 21, 0, 0, 0, DateTimeKind.Unspecified),
-                            StationId = 3,
-                            Status = true
-                        },
-                        new
-                        {
-                            BusServiceId = 14,
-                            Date = new DateTime(2022, 5, 12, 13, 0, 0, 0, DateTimeKind.Unspecified),
-                            StationId = 1,
-                            Status = true
-                        },
-                        new
-                        {
-                            BusServiceId = 15,
                             Date = new DateTime(2022, 5, 12, 14, 0, 0, 0, DateTimeKind.Unspecified),
-                            StationId = 2,
-                            Status = true
+                            FromCityId = 4,
+                            Price = 400,
+                            Station1Id = 2,
+                            Station2Id = 3,
+                            Status = true,
+                            ToCityId = 1
                         });
                 });
 
@@ -320,15 +327,6 @@ namespace DataAccessLayer.Migrations
                     b.HasKey("PassengerId");
 
                     b.ToTable("Passengers");
-
-                    b.HasData(
-                        new
-                        {
-                            PassengerId = 1,
-                            PassengerName = "Murat Kuşcan",
-                            PassengerTc = "2545897468",
-                            PassengerTel = "5364665961"
-                        });
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Reservation", b =>
@@ -336,29 +334,27 @@ namespace DataAccessLayer.Migrations
                     b.Property<int>("BusServiceId")
                         .HasColumnType("int");
 
-                    b.Property<int>("SeatNo")
+                    b.Property<int>("SeatId")
                         .HasColumnType("int");
 
-                    b.Property<int>("PassengerId")
+                    b.Property<int?>("AppUserId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PassengerId")
                         .HasColumnType("int");
 
                     b.Property<int>("PnrNo")
                         .HasColumnType("int");
 
-                    b.HasKey("BusServiceId", "SeatNo");
+                    b.HasKey("BusServiceId", "SeatId");
+
+                    b.HasIndex("AppUserId");
 
                     b.HasIndex("PassengerId");
 
-                    b.ToTable("Reservations");
+                    b.HasIndex("SeatId");
 
-                    b.HasData(
-                        new
-                        {
-                            BusServiceId = 1,
-                            SeatNo = 10,
-                            PassengerId = 1,
-                            PnrNo = 25302530
-                        });
+                    b.ToTable("Reservations");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Seat", b =>
@@ -553,107 +549,6 @@ namespace DataAccessLayer.Migrations
                     b.HasKey("StationId");
 
                     b.ToTable("Stations");
-
-                    b.HasData(
-                        new
-                        {
-                            StationId = 1,
-                            FromCity = "Karabük",
-                            Price = 300,
-                            Station1 = "Kocaeli",
-                            Station2 = "Bolu",
-                            ToCity = "İstanbul"
-                        },
-                        new
-                        {
-                            StationId = 2,
-                            FromCity = "Gaziantep",
-                            Price = 500,
-                            Station1 = "Bolu",
-                            Station2 = "Adana",
-                            ToCity = "İstanbul"
-                        },
-                        new
-                        {
-                            StationId = 3,
-                            FromCity = "Bolu",
-                            Price = 200,
-                            Station1 = "",
-                            Station2 = "",
-                            ToCity = "İstanbul"
-                        },
-                        new
-                        {
-                            StationId = 4,
-                            FromCity = "Kocaeli",
-                            Price = 100,
-                            Station1 = "",
-                            Station2 = "",
-                            ToCity = "İstanbul"
-                        },
-                        new
-                        {
-                            StationId = 5,
-                            FromCity = "Adana",
-                            Price = 400,
-                            Station1 = "",
-                            Station2 = "",
-                            ToCity = "İstanbul"
-                        },
-                        new
-                        {
-                            StationId = 6,
-                            FromCity = "İstanbul",
-                            Price = 300,
-                            Station1 = "",
-                            Station2 = "",
-                            ToCity = "Karabük"
-                        },
-                        new
-                        {
-                            StationId = 7,
-                            FromCity = "Kocaeli",
-                            Price = 200,
-                            Station1 = "",
-                            Station2 = "",
-                            ToCity = "Karabük"
-                        },
-                        new
-                        {
-                            StationId = 8,
-                            FromCity = "Bolu",
-                            Price = 100,
-                            Station1 = "",
-                            Station2 = "",
-                            ToCity = "Karabük"
-                        },
-                        new
-                        {
-                            StationId = 9,
-                            FromCity = "Adana",
-                            Price = 200,
-                            Station1 = "",
-                            Station2 = "",
-                            ToCity = "Gaziantep"
-                        },
-                        new
-                        {
-                            StationId = 10,
-                            FromCity = "Bolu",
-                            Price = 400,
-                            Station1 = "",
-                            Station2 = "",
-                            ToCity = "Gaziantep"
-                        },
-                        new
-                        {
-                            StationId = 11,
-                            FromCity = "İstabul",
-                            Price = 500,
-                            Station1 = "Adana",
-                            Station2 = "Bolu",
-                            ToCity = "Gaziantep"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -759,17 +654,39 @@ namespace DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concrete.BusService", b =>
                 {
-                    b.HasOne("EntityLayer.Concrete.Station", "Station")
-                        .WithMany("BusServices")
-                        .HasForeignKey("StationId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                    b.HasOne("EntityLayer.Concrete.City", "FromCity")
+                        .WithMany("FromCity")
+                        .HasForeignKey("FromCityId")
                         .IsRequired();
 
-                    b.Navigation("Station");
+                    b.HasOne("EntityLayer.Concrete.City", "Station1")
+                        .WithMany("Station1")
+                        .HasForeignKey("Station1Id");
+
+                    b.HasOne("EntityLayer.Concrete.City", "Station2")
+                        .WithMany("Station2")
+                        .HasForeignKey("Station2Id");
+
+                    b.HasOne("EntityLayer.Concrete.City", "ToCity")
+                        .WithMany("ToCity")
+                        .HasForeignKey("ToCityId")
+                        .IsRequired();
+
+                    b.Navigation("FromCity");
+
+                    b.Navigation("Station1");
+
+                    b.Navigation("Station2");
+
+                    b.Navigation("ToCity");
                 });
 
             modelBuilder.Entity("EntityLayer.Concrete.Reservation", b =>
                 {
+                    b.HasOne("EntityLayer.Concrete.AppUser", "AppUser")
+                        .WithMany("Reservations")
+                        .HasForeignKey("AppUserId");
+
                     b.HasOne("EntityLayer.Concrete.BusService", "BusService")
                         .WithMany("Reservation")
                         .HasForeignKey("BusServiceId")
@@ -778,13 +695,21 @@ namespace DataAccessLayer.Migrations
 
                     b.HasOne("EntityLayer.Concrete.Passenger", "Passenger")
                         .WithMany("Reservations")
-                        .HasForeignKey("PassengerId")
+                        .HasForeignKey("PassengerId");
+
+                    b.HasOne("EntityLayer.Concrete.Seat", "Seat")
+                        .WithMany()
+                        .HasForeignKey("SeatId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("AppUser");
 
                     b.Navigation("BusService");
 
                     b.Navigation("Passenger");
+
+                    b.Navigation("Seat");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -838,19 +763,30 @@ namespace DataAccessLayer.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.AppUser", b =>
+                {
+                    b.Navigation("Reservations");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.BusService", b =>
                 {
                     b.Navigation("Reservation");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concrete.City", b =>
+                {
+                    b.Navigation("FromCity");
+
+                    b.Navigation("Station1");
+
+                    b.Navigation("Station2");
+
+                    b.Navigation("ToCity");
+                });
+
             modelBuilder.Entity("EntityLayer.Concrete.Passenger", b =>
                 {
                     b.Navigation("Reservations");
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.Station", b =>
-                {
-                    b.Navigation("BusServices");
                 });
 #pragma warning restore 612, 618
         }

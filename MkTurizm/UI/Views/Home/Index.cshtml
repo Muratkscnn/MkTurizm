@@ -1,4 +1,4 @@
-﻿@model EntityLayer.Concrete.Station
+﻿@model EntityLayer.Concrete.BusService
 
 
 @{
@@ -34,13 +34,13 @@
                                             <div class="col-xxs-12 col-xs-12 mt">
                                                 <div class="input-field">
                                                     <label for="toCity">Kalkış</label>
-                                                    @Html.DropDownListFor(x => x.ToCity, (List<SelectListItem>)ViewBag.cv, new { @class = "cs-select cs-skin-border" })
+                                                    @Html.DropDownListFor(x => x.ToCityId, (List<SelectListItem>)ViewBag.cv, new { @class = "cs-select cs-skin-border" })
                                                 </div>
                                             </div>
                                             <div class="col-xxs-12 col-xs-12 mt">
                                                 <div class="input-field">
                                                     <label for="fromCity">Varış</label>
-                                                    @Html.DropDownListFor(x => x.FromCity, (List<SelectListItem>)ViewBag.cv, new { @class = "cs-select cs-skin-border" })
+                                                    @Html.DropDownListFor(x => x.FromCityId, (List<SelectListItem>)ViewBag.cv, new { @class = "cs-select cs-skin-border" })
                                                 </div>
                                             </div>
                                             <div class="col-xxs-12 col-xs-6 mt alternate">

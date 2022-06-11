@@ -10,6 +10,9 @@ namespace EntityLayer.Concrete
     {
         public int CityId { get; set; }
         public string CityName { get; set; }
-
+        public virtual ICollection<BusService> ToCity { get; set; }
+        public virtual ICollection<BusService> Station1 { get; set; }
+        public virtual ICollection<BusService> Station2 { get; set; }
+        public virtual ICollection<BusService> FromCity { get; set; }
     }
 }

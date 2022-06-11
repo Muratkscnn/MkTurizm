@@ -12,7 +12,7 @@
             {
                 @foreach (var item in Model)
                 {
-                    if (item.SeatNo == x)
+                    if (item.Seat.SeatNo == x)
                     {
                         <div class="seat">
                             <input type="checkbox" hidden id="@x" />

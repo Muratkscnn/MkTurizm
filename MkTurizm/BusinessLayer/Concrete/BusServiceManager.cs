@@ -23,9 +23,9 @@ namespace BusinessLayer.Concrete
             _busservice.Add(t);
         }
 
-        public List<BusService> BusServiceList(string tocity, string fromcity)
+        public List<BusService> BusServiceList(int toCityId, int fromCityId)
         {
-            return _busservice.BusServiceList(tocity,fromcity);
+            return _busservice.BusServiceList(toCityId,fromCityId);
         }
 
         public BusService BusServiceWithStationById(int id)

@@ -10,6 +10,6 @@ namespace EntityLayer.Concrete
     {
         public int SeatId { get; set; }
         public int SeatNo { get; set; }
-
+        List<Reservation> reservations { get; set; }
     }
 }

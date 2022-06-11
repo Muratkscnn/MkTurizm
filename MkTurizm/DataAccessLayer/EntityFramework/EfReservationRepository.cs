@@ -17,7 +17,12 @@ namespace DataAccessLayer.EntityFramework
         {
             using (var c = new MKContext())
             {
-                var values= c.Reservations.Include(x => x.BusService).ThenInclude(y => y.Station).Include(x => x.Passenger).Where(x => x.PnrNo == Pnr).FirstOrDefault();
+                var values= c.Reservations
+                    .Include(x => x.BusService).ThenInclude(y=>y.FromCity)
+                    .Include(x => x.BusService).ThenInclude(y => y.ToCity)
+                    .Include(x => x.Passenger)
+                    .Include(x=>x.Seat)
+                    .Where(x => x.PnrNo == Pnr).FirstOrDefault();
                 return values;
             }
         }
@@ -26,7 +31,7 @@ namespace DataAccessLayer.EntityFramework
         {
             using (var c=new MKContext())
             {
-                return c.Reservations.Include(x => x.BusService).Where(x => x.BusServiceId == id).ToList();
+                return c.Reservations.Include(x => x.BusService).Include(x=>x.Seat).Where(x => x.BusServiceId == id).ToList();
             }
         }
     }

@@ -14,6 +14,5 @@ namespace EntityLayer.Concrete
         public string Station2 { get; set; }
         public string FromCity { get; set; }
         public int Price { get; set; }
-        public List<BusService> BusServices { get; set; }
     }
 }

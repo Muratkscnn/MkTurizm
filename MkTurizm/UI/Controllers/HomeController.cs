@@ -23,11 +23,11 @@ namespace UI.Controllers
         public IActionResult Index()
         {
             List<SelectListItem> cityValues = (from x in cm.GetList()
-                                                   select new SelectListItem
-                                                   {
-                                                       Text = x.CityName,
-                                                       Value = x.CityName.ToString()
-                                                   }).ToList();
+                                               select new SelectListItem
+                                               {
+                                                   Text = x.CityName,
+                                                   Value = x.CityId.ToString()
+                                               }).ToList();
             ViewBag.cv = cityValues;
             return View();
         }

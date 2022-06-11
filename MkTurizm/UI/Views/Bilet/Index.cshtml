@@ -16,15 +16,15 @@
         </tr>
         <tr>
             <td>@Model.Passenger.PassengerName</td>
-            <td>@Model.BusService.Station.ToCity</td>
-            <td>@Model.BusService.Station.FromCity</td>
-            <td>@Model.SeatNo</td>
+            <td>@Model.BusService.ToCity.CityName</td>
+            <td>@Model.BusService.FromCity.CityName</td>
+            <td>@Model.Seat.SeatNo</td>
             <td>@Model.BusService.Date</td>
             <form Asp-controller="Bilet" Asp-Action="DeleteTicket" method="post">
                 @Html.HiddenFor(x=>x.BusServiceId)
                 @Html.HiddenFor(x=>x.PassengerId)
                 @Html.HiddenFor(x=>x.PnrNo)
-                @Html.HiddenFor(x=>x.SeatNo)
+                @Html.HiddenFor(x=>x.SeatId)
             <td><button type="submit" class="btn btn-danger">Bilet İPTAL</button></td>
             </form>
         </tr>

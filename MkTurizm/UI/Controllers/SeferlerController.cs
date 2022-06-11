@@ -22,12 +22,12 @@ namespace UI.Controllers
         ReservationManager rm = new ReservationManager(new EfReservationRepository());
         SeatManager sm = new SeatManager(new EfSeatRepository());
         [HttpPost]
-        public IActionResult Index(Station s)
+        public IActionResult Index(BusService model)
         {
-            string toCity = s.ToCity;
-            string fromCity = s.FromCity;
+            int toCityId = model.ToCityId;
+            int fromCityId = model.FromCityId;
             //var values = bm.GetList();
-            var values = bm.BusServiceList(toCity, fromCity);
+            var values = bm.BusServiceList(toCityId, fromCityId);
             return View(values);
         }
 
@@ -41,7 +41,7 @@ namespace UI.Controllers
                                                }).ToList();
             ViewBag.sv = seatValues;
             ViewBag.id = id;
-            ViewBag.BusService = bm.BusServiceWithStationById(id);
+            ViewBag.station = bm.BusServiceWithStationById(id);
             return View();
         }
         [HttpPost]
@@ -53,7 +53,7 @@ namespace UI.Controllers
             var p = new Passenger() { PassengerName = t.Passenger.PassengerName, PassengerTel = t.Passenger.PassengerTel, PassengerTc = t.Passenger.PassengerTc };
             pm.Add(p);
             var lastPassenger = pm.GetLastPassenger();
-            var r = new Reservation() { BusServiceId = t.Reservation.BusServiceId, PassengerId = lastPassenger.PassengerId,SeatNo=t.Reservation.SeatNo,PnrNo=pnrno };
+            var r = new Reservation() { BusServiceId = t.Reservation.BusServiceId, PassengerId = lastPassenger.PassengerId,SeatId=t.Reservation.Seat.SeatNo,PnrNo=pnrno };
             rm.Add(r);
             return RedirectToAction("BiletBilgileri",r);
         }

@@ -13,11 +13,11 @@ namespace DataAccessLayer.EntityFramework
 {
     public class EfBusServiceRepository : GenericRepository<BusService>, IBusServiceDal
     {
-        public List<BusService> BusServiceList(string tocity, string fromcity)
+        public List<BusService> BusServiceList(int toCityId, int fromCityId)
         {
             using (var c=new MKContext())
             {
-              return  c.BusServices.Include(x=>x.Station).Where(x => x.Station.FromCity== fromcity && x.Station.ToCity == tocity).ToList();
+              return  c.BusServices.Include(x=>x.ToCity).Include(y=>y.FromCity).Where(x => x.FromCityId== fromCityId && x.ToCityId == toCityId).ToList();
             }
         }
 
@@ -25,7 +25,9 @@ namespace DataAccessLayer.EntityFramework
         {
             using (var c=new MKContext())
             {
-                return c.BusServices.Include(x => x.Station).Where(x => x.BusServiceId==id).FirstOrDefault();
+                return c.BusServices.Include(x => x.ToCity).Include(y => y.FromCity).
+                    Include(z=>z.Station1).Include(s=>s.Station2).
+                    Where(x => x.BusServiceId==id).FirstOrDefault();
             }
         }
     }

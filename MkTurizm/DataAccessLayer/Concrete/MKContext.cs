@@ -16,7 +16,7 @@ namespace DataAccessLayer.Concrete
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
              //optionsBuilder.UseSqlServer("Server=MK\\SQLEXPRESS;Database=MkTurizmDb;integrated security=true;");
-             optionsBuilder.UseSqlServer("Server=MK\\SQLEXPRESS;Database=DenemeMKTur;integrated security=true;");
+             optionsBuilder.UseSqlServer("Server=MK\\SQLEXPRESS;Database=MKTur;integrated security=true;");
            // optionsBuilder.UseSqlServer("Server=DESKTOP-8M7D7GE\\SQLEXPRESS;Database=MkTurizm;integrated security=true;");
 
         }
@@ -29,9 +29,14 @@ namespace DataAccessLayer.Concrete
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Reservation>().HasKey(pc => new { pc.BusServiceId, pc.SeatNo });
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(PassengerConfig).Assembly);
+            modelBuilder.Entity<Reservation>().HasKey(pc => new { pc.BusServiceId, pc.SeatId });
+            modelBuilder.Entity<BusService>().HasOne(x => x.ToCity).WithMany(y => y.ToCity).HasForeignKey(z => z.ToCityId).OnDelete(DeleteBehavior.ClientSetNull);
+            modelBuilder.Entity<BusService>().HasOne(x => x.Station1).WithMany(y => y.Station1).HasForeignKey(z => z.Station1Id).OnDelete(DeleteBehavior.ClientSetNull);
+            modelBuilder.Entity<BusService>().HasOne(x => x.Station2).WithMany(y => y.Station2).HasForeignKey(z => z.Station2Id).OnDelete(DeleteBehavior.ClientSetNull);
+            modelBuilder.Entity<BusService>().HasOne(x => x.FromCity).WithMany(y => y.FromCity).HasForeignKey(z => z.FromCityId).OnDelete(DeleteBehavior.ClientSetNull);
             base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(CityConfig).Assembly);
+
         }
 
 
