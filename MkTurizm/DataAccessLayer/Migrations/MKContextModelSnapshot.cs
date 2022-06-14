@@ -524,33 +524,6 @@ namespace DataAccessLayer.Migrations
                         });
                 });
 
-            modelBuilder.Entity("EntityLayer.Concrete.Station", b =>
-                {
-                    b.Property<int>("StationId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("FromCity")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Station1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Station2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ToCity")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("StationId");
-
-                    b.ToTable("Stations");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
                     b.Property<int>("Id")

@@ -27,6 +27,21 @@ namespace DataAccessLayer.EntityFramework
             }
         }
 
+        public List<Reservation> GetReservationWithAllDetailsByUser(int userId)
+        {
+            using (var c = new MKContext())
+            {
+                var values = c.Reservations
+                    .Include(x => x.BusService).ThenInclude(y => y.FromCity)
+                    .Include(x => x.BusService).ThenInclude(y => y.ToCity)
+                    .Include(x => x.Passenger)
+                    .Include(x => x.Seat)
+                    .Where(x => x.AppUserId == userId).ToList();
+                return values;
+            }
+
+        }
+
         public List<Reservation> GetReservationWithBusService(int id)
         {
             using (var c=new MKContext())

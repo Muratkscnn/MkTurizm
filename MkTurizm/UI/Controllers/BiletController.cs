@@ -2,6 +2,7 @@
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,14 @@ namespace UI.Controllers
 
     public class BiletController : Controller
     {
+        UserManager<AppUser> _userManager;
         ReservationManager rm = new ReservationManager(new EfReservationRepository());
+
+        public BiletController(UserManager<AppUser> userManager)
+        {
+            _userManager = userManager;
+        }
+
         public IActionResult Index(string Pnr)
         {
             if (string.IsNullOrEmpty(Pnr))
@@ -30,11 +38,22 @@ namespace UI.Controllers
             return RedirectToAction("Index", "Home");
         }
         [HttpPost]
-        public IActionResult DeleteTicket(Reservation p)
+        public IActionResult DeleteTicket(int pnrNo)
         {
-            rm.Delete(p);
+            var reservation=rm.GetReservationWithAllDetails(pnrNo);
+            rm.Delete(reservation);
                 return RedirectToAction("Index", "Home");
-
+        }
+        
+        public async Task<IActionResult> MyTickets()
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+            var values=rm.GetReservationWithAllDetailsByUser(user.Id);
+            if (values.Count>0)
+            {
+                return View(values);
+            }
+            return View();
         }
     }
 }

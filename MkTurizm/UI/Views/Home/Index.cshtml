@@ -71,6 +71,15 @@
                                 <div role="tabpanel" class="tab-pane" id="Bilet">
                                     @using (Html.BeginForm("Index", "Bilet", FormMethod.Post))
                                     {
+                                        if (User.Identity.IsAuthenticated)
+                                        {
+                                    
+                                        <span class="text-primary mb-5">Hoşgeldin @User.Identity.Name</span> 
+                                        <a href="/Bilet/MyTickets" class="btn btn-primary" style="margin-top:50px;">Bilet Detayların için Tıkla</a>
+
+                                        }
+                                        else
+                                        {
                                         <div class="row">
                                             <div class="col-xxs-12 col-xs-12 mt">
                                                 <div class="input-field">
@@ -83,9 +92,11 @@
                                             </div>
 
                                         </div>
-                                    }
+                                        }
 
-                                </div>
+                                        }
+
+</div>
 
 
                             </div>

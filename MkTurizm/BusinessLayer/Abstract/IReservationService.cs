@@ -11,6 +11,7 @@ namespace BusinessLayer.Abstract
     {
         List<Reservation> GetReservationWithBusService(int id);
         Reservation GetReservationWithAllDetails(int Pnr);
+        List<Reservation> GetReservationWithAllDetailsByUser(int userId);
 
     }
 }

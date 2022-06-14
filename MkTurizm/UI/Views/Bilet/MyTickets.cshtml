@@ -1,0 +1,35 @@
+﻿@model List<EntityLayer.Concrete.Reservation>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="container" style="margin-top:50px;margin-bottom:200px;">
+    <table class="table">
+        <tr>
+            <th>Yolcu Adı</th>
+            <th>Kalkış</th>
+            <th>Varış</th>
+            <th>Koltuk No</th>
+            <th>Tarih</th>
+            <th>İşlem</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>@item.Passenger.PassengerName</td>
+        <td>@item.BusService.ToCity.CityName</td>
+        <td>@item.BusService.FromCity.CityName</td>
+        <td>@item.Seat.SeatNo</td>
+        <td>@item.BusService.Date</td>
+        <td>
+            <form action="/Bilet/DeleteTicket" method="post">
+                <input type="hidden" name="pnrNo" value="@item.PnrNo" />
+                <button type="submit" class="btn btn-danger">Bilet İPTAL</button>
+             </form>
+        </td>
+    </tr>
+        }
+
+    </table>
+</div>

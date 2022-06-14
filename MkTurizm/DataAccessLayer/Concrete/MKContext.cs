@@ -23,7 +23,6 @@ namespace DataAccessLayer.Concrete
         public DbSet<Passenger> Passengers { get; set; }
         public DbSet<BusService> BusServices { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
-        public DbSet<Station> Stations { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Seat> Seats { get; set; }
 

@@ -78,6 +78,16 @@
                                 <li><a href="hotel.html">E-BİLET</a></li>
                                 <li><a href="blog.html">BLOG</a></li>
                                 <li><a href="contact.html">İLETİŞİM</a></li>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li class="active"><a href="/Account/LogOut">ÇIKIŞ YAP</a></li>
+
+                                }
+                                else
+                                {
+                                    <li class="active"><a href="/Account/Login">ÜYE GİRİŞİ</a></li>
+
+                                }
                             </ul>
                         </nav>
                     </div>

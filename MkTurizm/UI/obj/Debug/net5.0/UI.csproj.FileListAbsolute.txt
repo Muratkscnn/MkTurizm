@@ -467,3 +467,4 @@ C:\Users\MK\Desktop\Yeni Klasör\MkTurizm\MkTurizm\UI\bin\Debug\net5.0\Microsoft
 C:\Users\MK\Desktop\Yeni Klasör\MkTurizm\MkTurizm\UI\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\MK\Desktop\Yeni Klasör\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 C:\Users\MK\Desktop\Yeni Klasör\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\MK\Desktop\Yeni Klasör\MkTurizm\MkTurizm\UI\obj\Debug\net5.0\Razor\Views\Bilet\MyTickets.cshtml.g.cs

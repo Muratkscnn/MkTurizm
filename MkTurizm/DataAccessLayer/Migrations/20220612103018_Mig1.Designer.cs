@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(MKContext))]
-    [Migration("20220611181237_mig2523")]
-    partial class mig2523
+    [Migration("20220612103018_Mig1")]
+    partial class Mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -524,33 +524,6 @@ namespace DataAccessLayer.Migrations
                             SeatId = 30,
                             SeatNo = 30
                         });
-                });
-
-            modelBuilder.Entity("EntityLayer.Concrete.Station", b =>
-                {
-                    b.Property<int>("StationId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("FromCity")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Station1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Station2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ToCity")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("StationId");
-
-                    b.ToTable("Stations");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
