@@ -28,6 +28,11 @@ namespace BusinessLayer.Concrete
             return _busservice.BusServiceList(toCityId,fromCityId);
         }
 
+        public List<BusService> BusServiceList()
+        {
+            return _busservice.BusServiceList();
+        }
+
         public BusService BusServiceWithStationById(int id)
         {
             return _busservice.BusServiceWithStationById(id);

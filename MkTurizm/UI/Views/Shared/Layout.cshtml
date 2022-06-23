@@ -76,10 +76,10 @@
                                 </li>
                                 <li><a href="flight.html">YOLCUM NEREDE</a></li>
                                 <li><a href="hotel.html">E-BİLET</a></li>
-                                <li><a href="blog.html">BLOG</a></li>
                                 <li><a href="contact.html">İLETİŞİM</a></li>
                                 @if (User.Identity.IsAuthenticated)
                                 {
+                                    <li class="active"><a href="/Admin">ADMİN PANELİ</a></li>
                                     <li class="active"><a href="/Account/LogOut">ÇIKIŞ YAP</a></li>
 
                                 }

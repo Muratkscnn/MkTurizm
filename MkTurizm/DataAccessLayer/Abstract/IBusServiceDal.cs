@@ -10,6 +10,7 @@ namespace DataAccessLayer.Abstract
     public interface IBusServiceDal :IGenericDal<BusService>
     {
         List<BusService> BusServiceList(int toCityId, int fromCityId);
+        List<BusService> BusServiceList();
         BusService BusServiceWithStationById(int id);
     }
 }

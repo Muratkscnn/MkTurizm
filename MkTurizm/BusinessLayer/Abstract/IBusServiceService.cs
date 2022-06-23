@@ -11,6 +11,7 @@ namespace BusinessLayer.Abstract
     {
         List<BusService> BusServiceList(int toCityId, int fromCityId);
         BusService BusServiceWithStationById(int id);
+        List<BusService> BusServiceList();
 
 
     }

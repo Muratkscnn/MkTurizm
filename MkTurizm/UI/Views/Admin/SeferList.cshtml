@@ -1,0 +1,52 @@
+﻿@model IEnumerable<EntityLayer.Concrete.BusService>
+@{
+    ViewData["Title"] = "SeferList";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+@section Css {
+    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+}
+@section Scripts{
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#userList').DataTable(
+                {
+                    lengthMenu: [
+                        [2, 5, 10, 20, 40, -1],
+                        [2, 5, 10, 20, 40, "Tümü"]
+                    ],
+                    language: {
+                        url: "//cdn.datatables.net/plug-ins/1.12.1/i18n/tr.json"
+                    }
+                }
+            );
+        });
+    </script>
+}
+<h1>SeferList</h1>
+
+<table data-page-length="10" class="table table-sm table-striped table-hover" id="userList">
+    <thead>
+        <tr>
+            <th>Kalkış</th>
+            <th>Varış</th>
+            <th>Tarih</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ToCity.CityName</td>
+                <td>@item.FromCity.CityName</td>
+                <td>@item.Date</td>
+                <td>
+                    <a href="#" class="btn btn-warning">Düzenle</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

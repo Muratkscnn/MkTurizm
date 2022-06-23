@@ -1,0 +1,34 @@
+﻿@model BusServiceAddModel
+@{
+    ViewData["Title"] = "SeferAdd";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Yeni Sefer Ekleme</h1>
+
+@using (Html.BeginForm("SeferAdd", "Admin", FormMethod.Post))
+{
+    @Html.Label("Kalkış Şehri")
+    @Html.DropDownListFor(x => x.ToCityId, (List<SelectListItem>)ViewBag.cv, new { @class = "form-control" })
+    <br />
+    @Html.Label("1.Durak")
+    @Html.DropDownListFor(x => x.Station1Id, (List<SelectListItem>)ViewBag.cv, new { @class = "form-control" })
+    <br />
+    @Html.Label("2.Durak")
+    @Html.DropDownListFor(x => x.Station2Id, (List<SelectListItem>)ViewBag.cv, new { @class = "form-control" })
+    <br />
+    @Html.Label("Varış Şehri")
+    @Html.DropDownListFor(x => x.FromCityId, (List<SelectListItem>)ViewBag.cv, new { @class = "form-control" })
+    <br />
+    @Html.Label("Fiyat")
+    @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.Date, new { placeholder = "dd-MM-YYYY", @class = "form-control" })
+    <br />
+    @Html.Label("Saat")
+    @Html.TextBoxFor(x => x.Hour, new { placeholder = "hh:mm", @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Sefer Kaydet</button>
+}
+
